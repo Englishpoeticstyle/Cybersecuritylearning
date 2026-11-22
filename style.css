@@ -1,0 +1,112 @@
+:root {
+  --bg: #ffffff;
+  --text: #1b1f24;
+  --muted: #55606b;
+  --card: #f4f6f8;
+  --accent: #0b6e4f;
+  --border: #d0d7de;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1419;
+    --text: #e6edf3;
+    --muted: #9aa7b4;
+    --card: #1a222b;
+    --accent: #3fb88f;
+    --border: #2d3742;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", "Noto Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header, main, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header { padding-top: 2rem; }
+header p { color: var(--muted); }
+
+h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.4rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+
+input[type="search"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+}
+
+input[type="search"]:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+#status { color: var(--muted); font-size: 0.95rem; }
+
+.terms { list-style: none; padding: 0; margin: 0; }
+
+.term {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.term[hidden] { display: none; }
+.term h3 { margin: 0 0 0.5rem; font-size: 1.15rem; color: var(--accent); }
+
+.lang {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.lang .label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.lang .word { font-weight: 700; font-size: 1.05rem; margin: 0.1rem 0; }
+.lang p { margin: 0.3rem 0; }
+.lang .pron { color: var(--muted); font-size: 0.92rem; }
+
+.lang[dir="rtl"] { text-align: right; }
+
+button.play {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.9rem;
+  margin: 0.4rem 0.4rem 0 0;
+  font-size: 0.95rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+button.play:hover { background: var(--accent); color: var(--bg); }
+
+footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}

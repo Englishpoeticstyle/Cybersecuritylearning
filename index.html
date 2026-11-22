@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; media-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Cybersecurity Glossary | Arabic, French, English</title>
+  <meta name="description" content="A plain-language cybersecurity glossary in Arabic, French and English, with phonetics and audio pronunciation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cybersecurity Learning</h1>
+    <p>Security education in Arabic, French, and English. Learn the words, hear how they sound.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="glossary-title">
+      <h2 id="glossary-title">Glossary</h2>
+      <label for="search">Search in any language</label>
+      <input id="search" type="search" autocomplete="off" placeholder="phishing, hameçonnage, التَّصَيُّد">
+      <p id="status" role="status" aria-live="polite"></p>
+      <ul id="list" class="terms"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Educational content only. We do not teach attacks on systems you do not own or have permission to test.</p>
+    <p>No cookies, no tracking, no accounts. Security contact: see the repository SECURITY.md.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
